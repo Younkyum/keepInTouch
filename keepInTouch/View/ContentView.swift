@@ -28,10 +28,10 @@ struct ContentView: View {
                 }
                 .listStyle(.plain)
                 
-            }
-            )}
+            })
     }
 }
+                   }
 
 #Preview {
     ContentView()
@@ -39,6 +39,7 @@ struct ContentView: View {
 
 
 struct CustomCellView: View {
+    @State private var showDetailModal = false
     var body: some View {
         HStack{
             Image("ProfileImage")
@@ -55,9 +56,16 @@ struct CustomCellView: View {
             })
             
         }
+        .onTapGesture {
+            showDetailModal = true
+        }
         .listRowSeparator(.hidden)
+        .sheet(isPresented: self.$showDetailModal, content: {
+            ContactDetailView()
+        })
     }
 }
+               
 
 
 struct CustomHeaderCellView: View {
