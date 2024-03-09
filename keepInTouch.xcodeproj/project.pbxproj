@@ -11,6 +11,9 @@
 		C61678EB2B9ADDC900245FC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61678EA2B9ADDC900245FC5 /* ContentView.swift */; };
 		C61678ED2B9ADDCC00245FC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C61678EC2B9ADDCC00245FC5 /* Assets.xcassets */; };
 		C61678F02B9ADDCC00245FC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C61678EF2B9ADDCC00245FC5 /* Preview Assets.xcassets */; };
+		C61678F72B9AE51700245FC5 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61678F62B9AE51700245FC5 /* Contacts.swift */; };
+		C61678F92B9B019300245FC5 /* PlusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61678F82B9B019300245FC5 /* PlusView.swift */; };
+		C61678FB2B9B030E00245FC5 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61678FA2B9B030E00245FC5 /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		C61678EA2B9ADDC900245FC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C61678EC2B9ADDCC00245FC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C61678EF2B9ADDCC00245FC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C61678F62B9AE51700245FC5 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		C61678F82B9B019300245FC5 /* PlusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusView.swift; sourceTree = "<group>"; };
+		C61678FA2B9B030E00245FC5 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,9 @@
 		C61678E72B9ADDC900245FC5 /* keepInTouch */ = {
 			isa = PBXGroup;
 			children = (
+				C61678F82B9B019300245FC5 /* PlusView.swift */,
+				C61678FA2B9B030E00245FC5 /* SettingView.swift */,
+				C61678F62B9AE51700245FC5 /* Contacts.swift */,
 				C61678E82B9ADDC900245FC5 /* keepInTouchApp.swift */,
 				C61678EA2B9ADDC900245FC5 /* ContentView.swift */,
 				C61678EC2B9ADDCC00245FC5 /* Assets.xcassets */,
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C61678F92B9B019300245FC5 /* PlusView.swift in Sources */,
+				C61678FB2B9B030E00245FC5 /* SettingView.swift in Sources */,
 				C61678EB2B9ADDC900245FC5 /* ContentView.swift in Sources */,
 				C61678E92B9ADDC900245FC5 /* keepInTouchApp.swift in Sources */,
+				C61678F72B9AE51700245FC5 /* Contacts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +287,7 @@
 				DEVELOPMENT_TEAM = ZADA25JZ4A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSContactsUsageDescription = "$(Contacts)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +317,7 @@
 				DEVELOPMENT_TEAM = ZADA25JZ4A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSContactsUsageDescription = "$(Contacts)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
