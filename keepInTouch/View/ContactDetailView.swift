@@ -9,16 +9,28 @@ import SwiftUI
 
 struct ContactDetailView: View {
     var body: some View {
-        VStack(alignment: .leading, spacing: 0, content: {
-            ProfileView()
-            KeepInTouchSettingView()
-            ComponetView()
-            ComponetView()
-            ComponetView()
-            ComponetView()
-            ComponetView()
-            ComponetView()
+        HStack(alignment: .center, content: {
+            Spacer()
+            Capsule()
+                .fill(.textGray)
+                .frame(width: 34, height: 5)
+            Spacer()
         })
+        .padding(.top, 5)
+        ScrollView{
+            VStack(alignment: .leading, spacing: 0, content: {
+                ProfileView()
+                KeepInTouchSettingView()
+                ComponetView()
+                ComponetView()
+                ComponetView()
+                ComponetView()
+                ComponetView()
+                ComponetView()
+                ButtonsView()
+            })
+        }
+        .scrollIndicators(.never)
     }
 }
 
@@ -36,9 +48,10 @@ struct ProfileView: View {
             VStack(alignment: .leading, spacing: 7, content: {
                 Text("Younkyum Jin")
                     .font(.system(size: 20, weight: .semibold))
+                    .foregroundStyle(.textBlack)
                 Text("Team Shaka")
                     .font(.system(size: 16, weight: .regular))
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.textGray)
             })
             Spacer()
         }
@@ -56,7 +69,7 @@ struct KeepInTouchSettingView: View {
                         .font(.system(size: 20))
                     Text("연락 기간 설정")
                         .font(.system(size: 12))
-                        .foregroundStyle(.gray)
+                        .foregroundStyle(.textGray)
                 })
                 Spacer()
                 HStack(alignment: .center, spacing: 0, content: {
@@ -68,10 +81,11 @@ struct KeepInTouchSettingView: View {
                 })
             }
             .padding(16)
-            .background(Color(hex:"F9F9F9"))
+            .background(.backgroundGray)
             .cornerRadius(10)
         }
         .padding(16)
+        
     }
 }
 
@@ -81,9 +95,33 @@ struct ComponetView: View {
         VStack(alignment: .leading, spacing: 4, content:{
             Text("전화번호")
                 .font(.system(size: 16))
-                .foregroundStyle(.gray)
+                .foregroundStyle(.textGray)
             Text("010-9186-5287")
                 .font(.system(size: 20, weight: .semibold))
+                .foregroundStyle(.textBlack)
         }).padding(16)
+    }
+}
+
+
+struct ButtonsView: View {
+    var body: some View {
+        HStack(content: {
+            Spacer()
+            ZStack {
+                Button(action: {
+                    print("정보 추가하기 버튼 눌림")
+                }, label: {
+                    Text("정보 추가하기")
+                        .font(.system(size: 18, weight: .semibold))
+                        .foregroundStyle(.textWhite)
+                })
+                .padding([.top, .bottom], 13)
+                .padding([.leading, .trailing], 22)
+            }
+            .background(.backgroundBlack)
+            .clipShape(Capsule())
+        })
+        .padding(.trailing, 16)
     }
 }

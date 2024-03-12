@@ -9,63 +9,71 @@ import SwiftUI
 
 
 struct ContentView: View {
+    
     var body: some View {
+        let contacts: [ContactItem] = [
+            ContactItem(image: "Setting", name: "Younkyum JIN", company: "Team Shaka"),
+            ContactItem(image: "ProfileImage", name: "Maria DB", company: "")
+        ]
+        
         NavigationStack{
             VStack(alignment: .leading, content: {
                 TitleBarView()
-                List {
-                    CustomHeaderCellView()
-                    CustomCellView()
-                    CustomCellView()
-                    CustomCellView()
-                    CustomCellView()
-                    CustomCellView()
-                    CustomHeaderCellView()
-                    CustomCellView()
-                    CustomCellView()
-                    CustomCellView()
-                    
+                    .background(.backgroundWhite)
+                List(contacts) { contact in
+                    ContactCellView(userImage: contact.image, contactName: contact.name, contactCompanyName:contact.company)
+                        .listRowBackground(Color.clear)
                 }
                 .listStyle(.plain)
+                .scrollContentBackground(.hidden)
                 
             })
+            .background(.backgroundWhite)
+        }
     }
 }
-                   }
 
 #Preview {
     ContentView()
 }
 
 
-struct CustomCellView: View {
+struct ContactCellView: View {
     @State private var showDetailModal = false
+    @State public var userImage: String
+    @State public var contactName: String
+    @State public var contactCompanyName: String
+    
     var body: some View {
         HStack{
-            Image("ProfileImage")
+            Image(userImage)
                 .resizable()
                 .frame(width: 58 , height: 58)
                 .cornerRadius(29)
-            VStack(alignment: .leading, spacing: 5, content: {
-                Text("Younkyum Jin")
+            VStack(alignment: .leading, spacing: 4, content: {
+                Text(contactName)
                     .font(.system(size: 20))
                     .fontWeight(.semibold)
-                Text("Team Shaka")
+                    .foregroundStyle(.textBlack)
+                
+                Text(contactCompanyName)
                     .font(.system(size: 16))
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.textGray)
+                
             })
-            
+            Spacer()
         }
         .onTapGesture {
             showDetailModal = true
         }
+        .background(.backgroundWhite)
         .listRowSeparator(.hidden)
         .sheet(isPresented: self.$showDetailModal, content: {
             ContactDetailView()
         })
     }
 }
-               
+
 
 
 struct CustomHeaderCellView: View {
@@ -75,8 +83,10 @@ struct CustomHeaderCellView: View {
                 .font(.system(size: 14))
                 .fontWeight(.light)
                 .foregroundStyle(.gray)
+            Spacer()
         }
         .frame(maxHeight: 35)
+        .background(.backgroundWhite)
     }
 }
 

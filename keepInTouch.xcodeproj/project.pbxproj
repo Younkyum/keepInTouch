@@ -16,6 +16,7 @@
 		C61678FB2B9B030E00245FC5 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61678FA2B9B030E00245FC5 /* SettingView.swift */; };
 		C61679022B9C23E100245FC5 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61679012B9C23E100245FC5 /* ContactDetailView.swift */; };
 		C61679052B9C2B2500245FC5 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61679042B9C2B2500245FC5 /* UIColorExtension.swift */; };
+		C61679092B9C315300245FC5 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C61679082B9C315300245FC5 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		C61678FA2B9B030E00245FC5 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		C61679012B9C23E100245FC5 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 		C61679042B9C2B2500245FC5 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		C61679082B9C315300245FC5 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				C61678F62B9AE51700245FC5 /* Contacts.swift */,
 				C61678E82B9ADDC900245FC5 /* keepInTouchApp.swift */,
 				C61678EC2B9ADDCC00245FC5 /* Assets.xcassets */,
+				C61679082B9C315300245FC5 /* Colors.xcassets */,
 				C61678EE2B9ADDCC00245FC5 /* Preview Content */,
 			);
 			path = keepInTouch;
@@ -156,6 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C61679092B9C315300245FC5 /* Colors.xcassets in Resources */,
 				C61678F02B9ADDCC00245FC5 /* Preview Assets.xcassets in Resources */,
 				C61678ED2B9ADDCC00245FC5 /* Assets.xcassets in Resources */,
 			);

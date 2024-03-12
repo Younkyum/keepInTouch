@@ -7,8 +7,29 @@
 
 import Contacts
 
-let contactsStore = CNContactStore()
+class ContactItem: ObservableObject, Identifiable {
+    @Published var image: String
+    @Published var name: String
+    @Published var company: String
+    var id: UUID = UUID()
+    
+    init(image: String, name: String, company: String) {
+        self.image = image
+        self.name = name
+        self.company = company
+    }
+}
 
-var contacts = [CNContact]()
 
-let keys = [CNContactFormatter.descriptorForRequiredKeys(for: .fullName)]
+protocol ContactUsable {}
+
+
+extension ContactUsable {
+    
+    func getContacts() {
+        let store = CNContactStore()
+        var _: [ContactItem] = []
+        
+        let keys = [CNContactThumbnailImageDataKey, CNContactFamilyNameKey, CNContactGivenNameKey, CNContactJobTitleKey] as [CNKeyDescriptor]
+    }
+}
