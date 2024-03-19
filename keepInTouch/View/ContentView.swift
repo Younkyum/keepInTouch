@@ -6,22 +6,19 @@
 //
 
 import SwiftUI
+import Contacts
 
 
 struct ContentView: View {
+    @State public var contacts = [CNContact]()
     
     var body: some View {
-        let contacts: [ContactItem] = [
-            ContactItem(image: "Setting", name: "Younkyum JIN", company: "Team Shaka"),
-            ContactItem(image: "ProfileImage", name: "Maria DB", company: "")
-        ]
-        
         NavigationStack{
             VStack(alignment: .leading, content: {
                 TitleBarView()
                     .background(.backgroundWhite)
-                List(contacts) { contact in
-                    ContactCellView(userImage: contact.image, contactName: contact.name, contactCompanyName:contact.company)
+                List(contacts, id: \.identifier) { contactDetail in
+                    ContactCellView(contactData: contactDetail)
                         .listRowBackground(Color.clear)
                 }
                 .listStyle(.plain)
@@ -30,52 +27,19 @@ struct ContentView: View {
             })
             .background(.backgroundWhite)
         }
+        .onAppear(perform: getContactList)
     }
 }
 
+
+// MARK: - Preview
 #Preview {
     ContentView()
 }
 
 
-struct ContactCellView: View {
-    @State private var showDetailModal = false
-    @State public var userImage: String
-    @State public var contactName: String
-    @State public var contactCompanyName: String
-    
-    var body: some View {
-        HStack{
-            Image(userImage)
-                .resizable()
-                .frame(width: 58 , height: 58)
-                .cornerRadius(29)
-            VStack(alignment: .leading, spacing: 4, content: {
-                Text(contactName)
-                    .font(.system(size: 20))
-                    .fontWeight(.semibold)
-                    .foregroundStyle(.textBlack)
-                
-                Text(contactCompanyName)
-                    .font(.system(size: 16))
-                    .foregroundStyle(.textGray)
-                
-            })
-            Spacer()
-        }
-        .onTapGesture {
-            showDetailModal = true
-        }
-        .background(.backgroundWhite)
-        .listRowSeparator(.hidden)
-        .sheet(isPresented: self.$showDetailModal, content: {
-            ContactDetailView()
-        })
-    }
-}
 
-
-
+// MARK: - CustomHeaderCellView
 struct CustomHeaderCellView: View {
     var body: some View {
         HStack{
@@ -91,6 +55,7 @@ struct CustomHeaderCellView: View {
 }
 
 
+// MARK: - TitleBarView
 struct TitleBarView: View {
     @State private var showPlusModal = false
     @State private var showSettingModal = false

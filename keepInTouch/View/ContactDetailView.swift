@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import Contacts
 
 struct ContactDetailView: View {
+    @State var contactDetail: CNContact
+    
     var body: some View {
         HStack(alignment: .center, content: {
             Spacer()
@@ -19,7 +22,7 @@ struct ContactDetailView: View {
         .padding(.top, 5)
         ScrollView{
             VStack(alignment: .leading, spacing: 0, content: {
-                ProfileView()
+                ProfileView(contactData: contactDetail)
                 KeepInTouchSettingView()
                 ComponetView()
                 ComponetView()
@@ -34,22 +37,19 @@ struct ContactDetailView: View {
     }
 }
 
-#Preview {
-    ContactDetailView()
-}
-
 struct ProfileView: View {
+    @State var contactData: CNContact
     var body: some View {
         HStack {
-            Image("ProfileImage")
+            Image(uiImage: (UIImage(data: contactData.thumbnailImageData ?? Data()) ?? UIImage(named: "thumbnail")!))
                 .resizable()
                 .frame(width: 122, height: 122)
                 .cornerRadius(61)
             VStack(alignment: .leading, spacing: 7, content: {
-                Text("Younkyum Jin")
+                Text("\(contactData.familyName)\(contactData.givenName)")
                     .font(.system(size: 20, weight: .semibold))
                     .foregroundStyle(.textBlack)
-                Text("Team Shaka")
+                Text("\(contactData.organizationName)")
                     .font(.system(size: 16, weight: .regular))
                     .foregroundStyle(.textGray)
             })
