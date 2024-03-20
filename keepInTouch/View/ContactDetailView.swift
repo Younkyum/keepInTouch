@@ -9,7 +9,7 @@ import SwiftUI
 import Contacts
 
 struct ContactDetailView: View {
-    @State var contactDetail: CNContact
+    @State var contactData: CNContact
     
     var body: some View {
         HStack(alignment: .center, content: {
@@ -22,14 +22,17 @@ struct ContactDetailView: View {
         .padding(.top, 5)
         ScrollView{
             VStack(alignment: .leading, spacing: 0, content: {
-                ProfileView(contactData: contactDetail)
+                ProfileView(contactData: contactData)
                 KeepInTouchSettingView()
-                ComponetView()
-                ComponetView()
-                ComponetView()
-                ComponetView()
-                ComponetView()
-                ComponetView()
+                if isPhoneNumberThere() {
+                    ComponetView(type: "전화번호", value: "\(contactData.phoneNumbers.first?.value.stringValue ?? "")")
+                }
+                if isEmailThere() {
+                    ComponetView(type: "이메일", value: "\(contactData.emailAddresses.first?.value ?? "")")
+                }
+//                if isNoteThere() {
+//                    ComponetView(type: "메모(추후 제거될 예정)", value: "\(contactData.note)")
+//                }
                 ButtonsView()
             })
         }
@@ -37,21 +40,26 @@ struct ContactDetailView: View {
     }
 }
 
+
+// MARK: - ProfileView
 struct ProfileView: View {
     @State var contactData: CNContact
     var body: some View {
         HStack {
             Image(uiImage: (UIImage(data: contactData.thumbnailImageData ?? Data()) ?? UIImage(named: "thumbnail")!))
                 .resizable()
-                .frame(width: 122, height: 122)
+                .frame(width: 100, height: 100)
                 .cornerRadius(61)
+                .padding(10)
             VStack(alignment: .leading, spacing: 7, content: {
                 Text("\(contactData.familyName)\(contactData.givenName)")
                     .font(.system(size: 20, weight: .semibold))
                     .foregroundStyle(.textBlack)
-                Text("\(contactData.organizationName)")
-                    .font(.system(size: 16, weight: .regular))
-                    .foregroundStyle(.textGray)
+                if contactData.organizationName != "" {
+                    Text("\(contactData.organizationName)")
+                        .font(.system(size: 16, weight: .regular))
+                        .foregroundStyle(.textGray)
+                }
             })
             Spacer()
         }
@@ -60,6 +68,8 @@ struct ProfileView: View {
     }
 }
 
+
+// MARK: - KeepInTouchSettingView
 struct KeepInTouchSettingView: View {
     var body: some View {
         ZStack {
@@ -90,38 +100,21 @@ struct KeepInTouchSettingView: View {
 }
 
 
+// MARK: - ComponentView
 struct ComponetView: View {
+    let type: String
+    @State var value: String
     var body: some View {
         VStack(alignment: .leading, spacing: 4, content:{
-            Text("전화번호")
+            Text(type)
                 .font(.system(size: 16))
                 .foregroundStyle(.textGray)
-            Text("010-9186-5287")
-                .font(.system(size: 20, weight: .semibold))
+            Text(value)
+                .font(.system(size: 22, weight: .semibold))
                 .foregroundStyle(.textBlack)
         }).padding(16)
     }
 }
 
 
-struct ButtonsView: View {
-    var body: some View {
-        HStack(content: {
-            Spacer()
-            ZStack {
-                Button(action: {
-                    print("정보 추가하기 버튼 눌림")
-                }, label: {
-                    Text("정보 추가하기")
-                        .font(.system(size: 18, weight: .semibold))
-                        .foregroundStyle(.textWhite)
-                })
-                .padding([.top, .bottom], 13)
-                .padding([.leading, .trailing], 22)
-            }
-            .background(.backgroundBlack)
-            .clipShape(Capsule())
-        })
-        .padding(.trailing, 16)
-    }
-}
+

@@ -19,6 +19,8 @@
 		C63CA9642BA9B06A003809F3 /* ContactCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63CA9632BA9B06A003809F3 /* ContactCellView.swift */; };
 		C63CA9662BA9B11F003809F3 /* Extention-Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63CA9652BA9B11F003809F3 /* Extention-Content.swift */; };
 		C63CA9682BA9B88F003809F3 /* ContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63CA9672BA9B88F003809F3 /* ContactsModel.swift */; };
+		C63CA96A2BA9D10C003809F3 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63CA9692BA9D10C003809F3 /* ButtonView.swift */; };
+		C63CA96C2BA9D195003809F3 /* Extension-DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63CA96B2BA9D195003809F3 /* Extension-DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		C63CA9632BA9B06A003809F3 /* ContactCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCellView.swift; sourceTree = "<group>"; };
 		C63CA9652BA9B11F003809F3 /* Extention-Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention-Content.swift"; sourceTree = "<group>"; };
 		C63CA9672BA9B88F003809F3 /* ContactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsModel.swift; sourceTree = "<group>"; };
+		C63CA9692BA9D10C003809F3 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		C63CA96B2BA9D195003809F3 /* Extension-DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-DetailView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 				C61679042B9C2B2500245FC5 /* UIColorExtension.swift */,
 				C63CA9652BA9B11F003809F3 /* Extention-Content.swift */,
 				C63CA9672BA9B88F003809F3 /* ContactsModel.swift */,
+				C63CA96B2BA9D195003809F3 /* Extension-DetailView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				C63CA9632BA9B06A003809F3 /* ContactCellView.swift */,
+				C63CA9692BA9D10C003809F3 /* ButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -188,8 +194,10 @@
 			files = (
 				C63CA9662BA9B11F003809F3 /* Extention-Content.swift in Sources */,
 				C63CA9682BA9B88F003809F3 /* ContactsModel.swift in Sources */,
+				C63CA96A2BA9D10C003809F3 /* ButtonView.swift in Sources */,
 				C61679022B9C23E100245FC5 /* ContactDetailView.swift in Sources */,
 				C63CA9642BA9B06A003809F3 /* ContactCellView.swift in Sources */,
+				C63CA96C2BA9D195003809F3 /* Extension-DetailView.swift in Sources */,
 				C61679052B9C2B2500245FC5 /* UIColorExtension.swift in Sources */,
 				C61678F92B9B019300245FC5 /* PlusView.swift in Sources */,
 				C61678FB2B9B030E00245FC5 /* SettingView.swift in Sources */,

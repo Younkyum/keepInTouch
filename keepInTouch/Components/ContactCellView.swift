@@ -39,7 +39,7 @@ struct ContactCellView: View {
         }
         .background(.backgroundWhite)
         .sheet(isPresented: self.$showDetailModal, content: {
-            ContactDetailView(contactDetail: contactData)
+            ContactDetailView(contactData: contactData)
         })
     }
 }

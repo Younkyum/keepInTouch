@@ -16,7 +16,13 @@ extension ContentView {
         switch CNContactStore.authorizationStatus(for: .contacts) {
         case .authorized:
             do {
-                let keys = [CNContactPhoneNumbersKey, CNContactGivenNameKey, CNContactFamilyNameKey, CNContactThumbnailImageDataKey, CNContactJobTitleKey, CNContactOrganizationNameKey] as [CNKeyDescriptor]
+                let keys = [CNContactPhoneNumbersKey,
+                            CNContactGivenNameKey,
+                            CNContactFamilyNameKey, 
+                            CNContactThumbnailImageDataKey,
+                            CNContactOrganizationNameKey,
+                            //CNContactNoteKey,
+                            CNContactEmailAddressesKey] as [CNKeyDescriptor]
                 
                 let request = CNContactFetchRequest(keysToFetch: keys)
                 request.sortOrder = .userDefault
