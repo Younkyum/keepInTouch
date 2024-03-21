@@ -20,20 +20,14 @@ struct ContactDetailView: View {
             Spacer()
         })
         .padding(.top, 5)
+        .frame(height: 10)
         ScrollView{
             VStack(alignment: .leading, spacing: 0, content: {
                 ProfileView(contactData: contactData)
                 KeepInTouchSettingView()
-                if isPhoneNumberThere() {
-                    ComponetView(type: "전화번호", value: "\(contactData.phoneNumbers.first?.value.stringValue ?? "")")
-                }
-                if isEmailThere() {
-                    ComponetView(type: "이메일", value: "\(contactData.emailAddresses.first?.value ?? "")")
-                }
-//                if isNoteThere() {
-//                    ComponetView(type: "메모(추후 제거될 예정)", value: "\(contactData.note)")
-//                }
-                ButtonsView()
+                ComponetView(type: "전화번호", value: "\(contactData.phoneNumbers.first?.value.stringValue ?? "")")
+                ComponetView(type: "이메일", value: "\(contactData.emailAddresses.first?.value ?? "")")
+                //ButtonsView()
             })
         }
         .scrollIndicators(.never)
@@ -109,7 +103,7 @@ struct ComponetView: View {
             Text(type)
                 .font(.system(size: 16))
                 .foregroundStyle(.textGray)
-            Text(value)
+            TextField(type, text: $value)
                 .font(.system(size: 22, weight: .semibold))
                 .foregroundStyle(.textBlack)
         }).padding(16)

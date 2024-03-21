@@ -34,12 +34,12 @@ struct ContactCellView: View {
             })
             Spacer()
         }
-        .onTapGesture {
-            showDetailModal = true
-        }
         .background(.backgroundWhite)
         .sheet(isPresented: self.$showDetailModal, content: {
             ContactDetailView(contactData: contactData)
         })
+        .onTapGesture {
+            showDetailModal = true
+        }
     }
 }
