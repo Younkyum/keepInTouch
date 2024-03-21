@@ -17,7 +17,7 @@ struct ContentView: View {
             VStack(alignment: .leading, content: {
                 TitleBarView()
                     .background(.backgroundWhite)
-                List(contacts, id: \.identifier) { contactDetail in
+                List(contacts, id: \CNContact.id) { contactDetail in
                     ContactCellView(contactData: contactDetail)
                         .listRowBackground(Color.clear)
                 }
@@ -97,3 +97,5 @@ struct TitleBarView: View {
         .frame(maxHeight: 44)
     }
 }
+
+

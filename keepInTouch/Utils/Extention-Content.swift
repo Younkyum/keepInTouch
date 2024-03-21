@@ -32,7 +32,7 @@ extension ContentView {
                 })
                 
             } catch {
-                print("error occured while authorized job")
+                print("error occured while authorized job: \(error)")
             }
         case .notDetermined:
             print("notDetermined")
