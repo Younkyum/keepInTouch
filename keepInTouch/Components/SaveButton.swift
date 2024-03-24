@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ButtonsView: View {
+struct SaveButton: View {
     @Binding var isChanged: Bool
     var body: some View {
         HStack(content: {
@@ -29,8 +29,9 @@ struct ButtonsView: View {
                 })
                 .padding([.leading, .trailing], 22)
                 .padding([.top, .bottom], 12)
+                .disabled(!isChanged)
             }
-            .background(.backgroundBlack)
+            .background(isChanged ? .backgroundBlack : .backgroundGray)
             .clipShape(RoundedRectangle(cornerRadius: 25))
         })
         .padding(.trailing, 16)

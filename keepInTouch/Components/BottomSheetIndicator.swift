@@ -18,5 +18,6 @@ struct BottomSheetIndicator: View {
         })
         .padding(.top, 5)
         .frame(height: 10)
+        .background(.backgroundWhite)
     }
 }
