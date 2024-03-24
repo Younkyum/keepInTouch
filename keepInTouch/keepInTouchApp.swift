@@ -11,7 +11,7 @@ import SwiftUI
 struct keepInTouchApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomView()
         }
     }
 }

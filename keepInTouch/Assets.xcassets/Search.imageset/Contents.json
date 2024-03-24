@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Sort.png",
+      "filename" : "Search (搜索).png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,7 +12,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Sort (排序).png",
+      "filename" : "Search (搜索) (1).png",
       "idiom" : "universal",
       "scale" : "1x"
     },

@@ -9,7 +9,7 @@ import Foundation
 import Contacts
 import UIKit
 
-extension ContentView {
+extension HomView {
     func getContactList() {
         let CNStore = CNContactStore()
         
@@ -21,7 +21,6 @@ extension ContentView {
                             CNContactFamilyNameKey, 
                             CNContactThumbnailImageDataKey,
                             CNContactOrganizationNameKey,
-                            //CNContactNoteKey,
                             CNContactEmailAddressesKey] as [CNKeyDescriptor]
                 
                 let request = CNContactFetchRequest(keysToFetch: keys)
