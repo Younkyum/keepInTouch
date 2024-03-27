@@ -8,12 +8,15 @@
 import SwiftUI
 import Contacts
 
-struct ContactCellView: View {
+struct ContactRow: View {
     @State public var contactData: CNContact
     @State private var showDetailModal = false
+    @Binding var selectedConact: CNContact?
     
     var body: some View {
-        NavigationLink(destination: ContactDetailView(contactData: contactData)){
+        Button(action: {
+            selectedConact = contactData
+        }, label: {
             HStack{
                 Image(uiImage: (UIImage(data: contactData.thumbnailImageData ?? Data()) ?? UIImage(named: "thumbnail")!))
                     .resizable()
@@ -35,7 +38,6 @@ struct ContactCellView: View {
                 })
                 Spacer()
             }
-            .background(.backgroundWhite)
-        }
+        })
     }
 }

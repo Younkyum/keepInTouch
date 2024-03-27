@@ -9,7 +9,7 @@ import Foundation
 import Contacts
 import UIKit
 
-extension HomView {
+extension SelectContactView {
     func getContactList() {
         let CNStore = CNContactStore()
         
@@ -27,7 +27,7 @@ extension HomView {
                 request.sortOrder = .userDefault
                 
                 try CNStore.enumerateContacts(with: request, usingBlock: {contact, _ in
-                    contacts.append(contact)
+                    contactList.append(contact)
                 })
                 
             } catch {
