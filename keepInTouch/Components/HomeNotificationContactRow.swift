@@ -8,15 +8,16 @@
 import SwiftUI
 
 
-struct NotiContactsRow: View {
+struct HomeNotificationContactRow: View {
     @State var notiTitle: String = "전화 걸기"
     @State var notiTargetName: String = "Younkyum Jin"
     @State var notiTargetOrganizationName: String = "Team Shaka"
     @State var notiDate = "2024-03-08"
+    @State var notiData: Data?
     
     var body: some View {
         HStack(alignment: .center){
-            Image("thumbnail")
+            Image(uiImage: (UIImage(data: notiData ?? Data()) ?? UIImage(named: "thumbnail")!))
                 .resizable()
                 .frame(width: 58, height: 58)
                 .clipShape(Circle())
@@ -53,12 +54,7 @@ struct NotiContactsRow: View {
 
 
 
-#Preview(body: {
-    NotiContactsRow()
-})
-
-
-extension NotiContactsRow {
+extension HomeNotificationContactRow {
     func makeRelativeTimeIndicator() -> RelativeDateIndicator {
         switch relativeDateFromToday(date: notiDate) {
         case ...(-1):

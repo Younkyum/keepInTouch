@@ -9,15 +9,16 @@ import SwiftUI
 import Contacts
 
 struct RegisterNotificationView: View {
+    @Environment(\.modelContext) private var context
     @State var title: String = ""
     @State var memo: String = ""
-    var cycleOptions = ["1주", "2주", "1개월", "2개월", "6개월"]
-    @State var selectedCycle = "1주"
-    @State var targetName: String?
-    @State var targetNumber: String?
+    var cycleOptions: [NotiCycle] = [.oneWeek, .twoWeeks, .oneMonth, .twoMonths, .sixMonths]
+    @State var selectedCycle = NotiCycle.oneWeek
+    @State var targetContact: CNContact
     
     
     @Binding var showRegisterNotificationView: Bool
+    @Binding var showSelectContactView: Bool
     @State var isChanged = false
     @State var showSaveActionSheet = false
     
@@ -25,40 +26,29 @@ struct RegisterNotificationView: View {
         NavigationStack {
             VStack {
                 List {
-                    Section("연락처 알림 정보") {
-                        TextField("예) 전화 하기", text: $title)
+                    ContactDataRow(contactData: targetContact)
+                    
+                    Section("알림 정보") {
+                        TextField("알림 제목(필수)", text: $title)
                             .onChange(of: title) { oldValue, newValue in
                                 isChangedSomething()
                             }
-                        TextField("추가 메모", text: $memo, axis: .vertical)
-                            .lineLimit(3...10)
-                            .onChange(of: memo) { oldValue, newValue in
-                                isChangedSomething()
-                            }
+//                        TextField("추가 메모", text: $memo, axis: .vertical)
+//                            .lineLimit(3...10)
+//                            .onChange(of: memo) { oldValue, newValue in
+//                                isChangedSomething()
+//                            }
                     }
                     
                     Section {
                         Picker("알림 반복 기간 설정", selection: $selectedCycle) {
-                            ForEach(cycleOptions, id: \.self) {
-                                Text($0)
+                            ForEach(cycleOptions, id: \.self) { cycle in
+                                Text(cycle.rawValue)
                             }
                         }
                     }
-                    
-                    Section {
-                        NavigationLink(destination: SelectContactView(targetName: $targetName, targetNumber: $targetNumber)) {
-                            Text("연락처 선택")
-                        }
-                        if (targetNumber != nil) {
-                            HStack {
-                                Text(targetName ?? "오류")
-                                Spacer()
-                                Text(targetNumber ?? "선택된 전화번호가 없음")
-                            }
-                        }
-                    }
-                    
                 }
+                .listStyle(.insetGrouped)
                 .toolbarTitleDisplayMode(.inline)
                 .navigationBarTitle("새로운 연락처 알림", displayMode: .inline)
                 .toolbar(content: {
@@ -76,7 +66,7 @@ struct RegisterNotificationView: View {
                         Button("완료") {
                             saveNotification()
                         }
-                        .disabled(!isChanged || targetNumber == nil)
+                        .disabled(!isChanged)
                         
                     }
                 })
@@ -94,7 +84,21 @@ struct RegisterNotificationView: View {
 
 extension RegisterNotificationView {
     func saveNotification() {
-        print("저장됨")
+        
+        var registerNoti = RegisteredNotification(targetName: "\(targetContact.familyName) \(targetContact.givenName)",
+                                                  targetOrganization: targetContact.organizationName,
+                                                  targetPhoneNumber: targetContact.phoneNumbers.first?.value.stringValue ?? "전화번호 없음",
+                                                  targetEmailAdress: (targetContact.emailAddresses.first?.value ?? "이메일 없음") as String,
+                                                  thumbNailData: targetContact.thumbnailImageData ?? Data(),
+                                                  cycle: selectedCycle.rawValue,
+                                                  title: title)
+        
+        context.insert(registerNoti)
+        
+        let result: ()? = try? context.save()
+        
+        showSelectContactView = false
+        showRegisterNotificationView = false
     }
     
     func isChangedSomething() {
@@ -106,6 +110,3 @@ extension RegisterNotificationView {
     }
 }
 
-//#Preview {
-//    RegisterNotificationView()
-//}

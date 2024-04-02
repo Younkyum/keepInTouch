@@ -27,7 +27,7 @@ struct HomeView: View {
     @State var sectionHead = ["이미 늦은 연락", "오늘 진행해야 하는 연락", "곧 다가오는 연락"]
     @State var footerHead = [lateNoti, todayNoti, futureNoti]
     
-    @State var showReigsterNotificationView = false
+    @State var showSelectContactView = false
     
     var body: some View {
         NavigationStack{
@@ -37,7 +37,7 @@ struct HomeView: View {
                         ForEach(footerHead.indices) { index in
                             Section {
                                 ForEach(footerHead[index], id: \.self) { data in
-                                    NotiContactsRow(notiTitle: data.notiTitle, notiTargetName: data.notiTargetName, notiTargetOrganizationName: data.notiTargetOrganization, notiDate: data.notiDate)
+                                    HomeNotificationContactRow(notiTitle: data.notiTitle, notiTargetName: data.notiTargetName, notiTargetOrganizationName: data.notiTargetOrganization, notiDate: data.notiDate)
                                 }
                                 .onDelete { footerHead[index].remove(atOffsets: $0) }
                             } header: {
@@ -54,14 +54,11 @@ struct HomeView: View {
                     
                     .toolbar(content: {
                         ToolbarItem(placement: .topBarTrailing, content: {
-                            Button(action: {
-                                print("리스트 버튼 눌림")
-                            }, label: {
+                            NavigationLink(destination: SeeReigsteredNotificationView()) {
                                 Image("Lists")
                                     .resizable()
                                     .frame(width: 24, height: 24)
-                            })
-                            
+                            }
                         })
                         ToolbarItem(placement: .topBarLeading) {
                             EditButton()
@@ -76,24 +73,19 @@ struct HomeView: View {
                     Spacer()
                     HStack{
                         Spacer()
-                        BottomTrailingButton(status: $showReigsterNotificationView)
+                        BottomTrailingButton(status: $showSelectContactView)
                     }
                 }
             }
             .background(.backgroundWhite)
         }
         .background(.backgroundWhite)
-        .sheet(isPresented: $showReigsterNotificationView) {
-            RegisterNotificationView(showRegisterNotificationView: $showReigsterNotificationView)
+        .sheet(isPresented: $showSelectContactView) {
+            SelectContactView(showSelectContactView: $showSelectContactView)
         }
     }
 }
 
-
-// MARK: - Preview
-#Preview {
-    HomeView()
-}
 
 struct testData: Hashable {
     var notiDate: String

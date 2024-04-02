@@ -1,15 +1,17 @@
 //
-//  ContactCellView.swift
+//  NotificationRow.swift
 //  keepInTouch
 //
-//  Created by YounkyumJin on 3/19/24.
+//  Created by YounkyumJin on 4/2/24.
 //
 
 import SwiftUI
 import Contacts
 
-struct ReigsterContactRow: View {
+
+struct ContactDataRow: View {
     @State public var contactData: CNContact
+    
     
     var body: some View {
         HStack{
@@ -33,6 +35,5 @@ struct ReigsterContactRow: View {
             })
             Spacer()
         }
-        
     }
 }

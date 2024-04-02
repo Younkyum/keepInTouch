@@ -16,19 +16,20 @@
 		C61678F02B9ADDCC00245FC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C61678EF2B9ADDCC00245FC5 /* Preview Assets.xcassets */; };
 		C61679052B9C2B2500245FC5 /* Extention-Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61679042B9C2B2500245FC5 /* Extention-Color.swift */; };
 		C61679092B9C315300245FC5 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C61679082B9C315300245FC5 /* Colors.xcassets */; };
-		C63CA9642BA9B06A003809F3 /* ContactRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63CA9632BA9B06A003809F3 /* ContactRow.swift */; };
+		C63CA9642BA9B06A003809F3 /* ContactButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63CA9632BA9B06A003809F3 /* ContactButtonRow.swift */; };
 		C63CA9662BA9B11F003809F3 /* Extention-Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63CA9652BA9B11F003809F3 /* Extention-Contact.swift */; };
 		C65DF6812BB407E6001E02D3 /* SelectContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65DF6802BB407E6001E02D3 /* SelectContactView.swift */; };
-		C67D9ABD2BBBD3610082F1D8 /* ReigsterContactRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67D9ABC2BBBD3610082F1D8 /* ReigsterContactRow.swift */; };
+		C67D9ABD2BBBD3610082F1D8 /* RegisteredListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67D9ABC2BBBD3610082F1D8 /* RegisteredListRow.swift */; };
+		C67D9ABF2BBBD96A0082F1D8 /* CycleEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67D9ABE2BBBD96A0082F1D8 /* CycleEnums.swift */; };
+		C67D9AC12BBBE56A0082F1D8 /* SeeReigsteredNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67D9AC02BBBE56A0082F1D8 /* SeeReigsteredNotificationView.swift */; };
+		C67D9AC32BBC153F0082F1D8 /* ContactDataRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67D9AC22BBC153F0082F1D8 /* ContactDataRow.swift */; };
 		C685E2D12BB040F20055ADBE /* Extension-KeyboardHide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685E2D02BB040F20055ADBE /* Extension-KeyboardHide.swift */; };
-		C685E2D32BB044550055ADBE /* ContactDataRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685E2D22BB044550055ADBE /* ContactDataRow.swift */; };
+		C685E2D32BB044550055ADBE /* ContactDetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685E2D22BB044550055ADBE /* ContactDetailRow.swift */; };
 		C685E2D72BB045B30055ADBE /* KeepInTouchSettingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685E2D62BB045B30055ADBE /* KeepInTouchSettingRow.swift */; };
 		C685E2D92BB045DB0055ADBE /* ProfileRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685E2D82BB045DB0055ADBE /* ProfileRow.swift */; };
-		C685E2DD2BB046A80055ADBE /* TitleBarRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685E2DC2BB046A80055ADBE /* TitleBarRow.swift */; };
-		C685E2DF2BB046EA0055ADBE /* ContactSectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685E2DE2BB046EA0055ADBE /* ContactSectionRow.swift */; };
 		C685E2E52BB0546F0055ADBE /* Extension-NavigationSwipeBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685E2E42BB0546F0055ADBE /* Extension-NavigationSwipeBack.swift */; };
 		C6C1489A2BB28DCA0096BEE1 /* CurrentNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C148992BB28DCA0096BEE1 /* CurrentNotification.swift */; };
-		C6C1489C2BB291A60096BEE1 /* NotiContactsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C1489B2BB291A60096BEE1 /* NotiContactsRow.swift */; };
+		C6C1489C2BB291A60096BEE1 /* HomeNotificationContactRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C1489B2BB291A60096BEE1 /* HomeNotificationContactRow.swift */; };
 		C6C1489E2BB294500096BEE1 /* Extension-Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C1489D2BB294500096BEE1 /* Extension-Calendar.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,19 +44,20 @@
 		C61678EF2B9ADDCC00245FC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C61679042B9C2B2500245FC5 /* Extention-Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention-Color.swift"; sourceTree = "<group>"; };
 		C61679082B9C315300245FC5 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		C63CA9632BA9B06A003809F3 /* ContactRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRow.swift; sourceTree = "<group>"; };
+		C63CA9632BA9B06A003809F3 /* ContactButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactButtonRow.swift; sourceTree = "<group>"; };
 		C63CA9652BA9B11F003809F3 /* Extention-Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention-Contact.swift"; sourceTree = "<group>"; };
 		C65DF6802BB407E6001E02D3 /* SelectContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectContactView.swift; sourceTree = "<group>"; };
-		C67D9ABC2BBBD3610082F1D8 /* ReigsterContactRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReigsterContactRow.swift; sourceTree = "<group>"; };
+		C67D9ABC2BBBD3610082F1D8 /* RegisteredListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredListRow.swift; sourceTree = "<group>"; };
+		C67D9ABE2BBBD96A0082F1D8 /* CycleEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleEnums.swift; sourceTree = "<group>"; };
+		C67D9AC02BBBE56A0082F1D8 /* SeeReigsteredNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeReigsteredNotificationView.swift; sourceTree = "<group>"; };
+		C67D9AC22BBC153F0082F1D8 /* ContactDataRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataRow.swift; sourceTree = "<group>"; };
 		C685E2D02BB040F20055ADBE /* Extension-KeyboardHide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-KeyboardHide.swift"; sourceTree = "<group>"; };
-		C685E2D22BB044550055ADBE /* ContactDataRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataRow.swift; sourceTree = "<group>"; };
+		C685E2D22BB044550055ADBE /* ContactDetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailRow.swift; sourceTree = "<group>"; };
 		C685E2D62BB045B30055ADBE /* KeepInTouchSettingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepInTouchSettingRow.swift; sourceTree = "<group>"; };
 		C685E2D82BB045DB0055ADBE /* ProfileRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRow.swift; sourceTree = "<group>"; };
-		C685E2DC2BB046A80055ADBE /* TitleBarRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarRow.swift; sourceTree = "<group>"; };
-		C685E2DE2BB046EA0055ADBE /* ContactSectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSectionRow.swift; sourceTree = "<group>"; };
 		C685E2E42BB0546F0055ADBE /* Extension-NavigationSwipeBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-NavigationSwipeBack.swift"; sourceTree = "<group>"; };
 		C6C148992BB28DCA0096BEE1 /* CurrentNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentNotification.swift; sourceTree = "<group>"; };
-		C6C1489B2BB291A60096BEE1 /* NotiContactsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiContactsRow.swift; sourceTree = "<group>"; };
+		C6C1489B2BB291A60096BEE1 /* HomeNotificationContactRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNotificationContactRow.swift; sourceTree = "<group>"; };
 		C6C1489D2BB294500096BEE1 /* Extension-Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-Calendar.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,8 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				C61678EA2B9ADDC900245FC5 /* HomeView.swift */,
-				C610C6632BB31CB500866482 /* RegisterNotificationView.swift */,
 				C65DF6802BB407E6001E02D3 /* SelectContactView.swift */,
+				C610C6632BB31CB500866482 /* RegisterNotificationView.swift */,
+				C67D9AC02BBBE56A0082F1D8 /* SeeReigsteredNotificationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,6 +130,7 @@
 				C685E2D02BB040F20055ADBE /* Extension-KeyboardHide.swift */,
 				C685E2E42BB0546F0055ADBE /* Extension-NavigationSwipeBack.swift */,
 				C6C1489D2BB294500096BEE1 /* Extension-Calendar.swift */,
+				C67D9ABE2BBBD96A0082F1D8 /* CycleEnums.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -135,11 +139,10 @@
 			isa = PBXGroup;
 			children = (
 				C610C6612BB2F9E000866482 /* BottomTrailingButton.swift */,
-				C63CA9632BA9B06A003809F3 /* ContactRow.swift */,
-				C67D9ABC2BBBD3610082F1D8 /* ReigsterContactRow.swift */,
-				C685E2DC2BB046A80055ADBE /* TitleBarRow.swift */,
-				C685E2DE2BB046EA0055ADBE /* ContactSectionRow.swift */,
-				C6C1489B2BB291A60096BEE1 /* NotiContactsRow.swift */,
+				C63CA9632BA9B06A003809F3 /* ContactButtonRow.swift */,
+				C67D9ABC2BBBD3610082F1D8 /* RegisteredListRow.swift */,
+				C6C1489B2BB291A60096BEE1 /* HomeNotificationContactRow.swift */,
+				C67D9AC22BBC153F0082F1D8 /* ContactDataRow.swift */,
 				C685E2DA2BB046110055ADBE /* ContactDetailComponents */,
 			);
 			path = Components;
@@ -150,7 +153,7 @@
 			children = (
 				C685E2D62BB045B30055ADBE /* KeepInTouchSettingRow.swift */,
 				C685E2D82BB045DB0055ADBE /* ProfileRow.swift */,
-				C685E2D22BB044550055ADBE /* ContactDataRow.swift */,
+				C685E2D22BB044550055ADBE /* ContactDetailRow.swift */,
 			);
 			path = ContactDetailComponents;
 			sourceTree = "<group>";
@@ -237,19 +240,20 @@
 			files = (
 				C63CA9662BA9B11F003809F3 /* Extention-Contact.swift in Sources */,
 				C6C1489E2BB294500096BEE1 /* Extension-Calendar.swift in Sources */,
-				C6C1489C2BB291A60096BEE1 /* NotiContactsRow.swift in Sources */,
-				C685E2DF2BB046EA0055ADBE /* ContactSectionRow.swift in Sources */,
+				C6C1489C2BB291A60096BEE1 /* HomeNotificationContactRow.swift in Sources */,
+				C67D9ABF2BBBD96A0082F1D8 /* CycleEnums.swift in Sources */,
 				C685E2D12BB040F20055ADBE /* Extension-KeyboardHide.swift in Sources */,
 				C6C1489A2BB28DCA0096BEE1 /* CurrentNotification.swift in Sources */,
-				C685E2DD2BB046A80055ADBE /* TitleBarRow.swift in Sources */,
 				C685E2D92BB045DB0055ADBE /* ProfileRow.swift in Sources */,
 				C610C6642BB31CB500866482 /* RegisterNotificationView.swift in Sources */,
-				C63CA9642BA9B06A003809F3 /* ContactRow.swift in Sources */,
+				C63CA9642BA9B06A003809F3 /* ContactButtonRow.swift in Sources */,
 				C685E2E52BB0546F0055ADBE /* Extension-NavigationSwipeBack.swift in Sources */,
 				C61679052B9C2B2500245FC5 /* Extention-Color.swift in Sources */,
-				C67D9ABD2BBBD3610082F1D8 /* ReigsterContactRow.swift in Sources */,
+				C67D9AC12BBBE56A0082F1D8 /* SeeReigsteredNotificationView.swift in Sources */,
+				C67D9AC32BBC153F0082F1D8 /* ContactDataRow.swift in Sources */,
+				C67D9ABD2BBBD3610082F1D8 /* RegisteredListRow.swift in Sources */,
 				C610C6622BB2F9E000866482 /* BottomTrailingButton.swift in Sources */,
-				C685E2D32BB044550055ADBE /* ContactDataRow.swift in Sources */,
+				C685E2D32BB044550055ADBE /* ContactDetailRow.swift in Sources */,
 				C685E2D72BB045B30055ADBE /* KeepInTouchSettingRow.swift in Sources */,
 				C61678EB2B9ADDC900245FC5 /* HomeView.swift in Sources */,
 				C610C6662BB31E5500866482 /* RegisteredNotification.swift in Sources */,

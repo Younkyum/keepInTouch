@@ -11,22 +11,32 @@ import Contacts
 
 struct SelectContactView: View {
     @State var contactList: [CNContact] = []
-    @Binding var targetName: String?
-    @Binding var targetNumber: String?
     @State var searchText: String = ""
+    @Binding var showSelectContactView: Bool
     
     var body: some View {
-        VStack {
-            List {
-                ForEach(searchResults, id: \.id) { contact in
-                    ContactRow(contactData: contact, targetName: $targetName, targetNumber: $targetNumber)
+        NavigationStack {
+            VStack {
+                List {
+                    ForEach(searchResults, id: \.id) { contact in
+                        ContactButtonRow(contactData: contact, showSelectContactView: $showSelectContactView)
+                    }
                 }
+                .listStyle(.plain)
+                .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
+                .onAppear(perform: getContactList)
+                .navigationTitle("연락처 선택")
+                .toolbarTitleDisplayMode(.inline)
+                .toolbar(content: {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button("취소") {
+                            showSelectContactView = false
+                        }
+                    }
+                })
+                .toolbar(.visible, for: .navigationBar)
             }
-            .listStyle(.plain)
-            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
         }
-        .onAppear(perform: getContactList)
-        .navigationTitle("연락처 선택")
     }
 }
 

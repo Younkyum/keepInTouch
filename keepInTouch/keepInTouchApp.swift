@@ -11,22 +11,22 @@ import SwiftData
 @main
 struct keepInTouchApp: App {
     
-//    var modelContainer: ModelContainer = {
-//        let schema = Schema([NotiContacts.self, RegiNotification.self, CurrNotification.self])
-//        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-//        
-//        do {
-//            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-//        } catch {
-//            fatalError("Could Not Create ModelContainer: \(error)")
-//        }
-//    }()
+    var modelContainer: ModelContainer = {
+        let schema = Schema([RegisteredNotification.self, CurrNotification.self])
+        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+        
+        do {
+            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+        } catch {
+            fatalError("Could Not Create ModelContainer: \(error)")
+        }
+    }()
     
     
     var body: some Scene {
         WindowGroup {
             HomeView()
-                //.modelContainer(modelContainer)
+                .modelContainer(modelContainer)
         }
     }
 }

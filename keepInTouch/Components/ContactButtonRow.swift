@@ -8,16 +8,15 @@
 import SwiftUI
 import Contacts
 
-struct ContactRow: View {
+struct ContactButtonRow: View {
     @State public var contactData: CNContact
     @State private var showDetailModal = false
-    @Binding var targetName: String?
-    @Binding var targetNumber: String?
+    @Binding var showSelectContactView: Bool
+    @State var showReigsterNotificationView: Bool = false
     
     var body: some View {
         Button(action: {
-            targetName = "\(contactData.familyName) \(contactData.givenName)"
-            targetNumber = contactData.phoneNumbers.first?.value.stringValue
+            showReigsterNotificationView = true
         }, label: {
             HStack{
                 Image(uiImage: (UIImage(data: contactData.thumbnailImageData ?? Data()) ?? UIImage(named: "thumbnail")!))
@@ -41,5 +40,8 @@ struct ContactRow: View {
                 Spacer()
             }
         })
+        .sheet(isPresented: $showReigsterNotificationView) {
+            RegisterNotificationView(targetContact: contactData, showRegisterNotificationView: $showReigsterNotificationView, showSelectContactView: $showSelectContactView)
+        }
     }
 }

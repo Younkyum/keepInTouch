@@ -9,7 +9,7 @@ import SwiftUI
 import Contacts
 
 
-struct ContactDataRow: View {
+struct ContactDetailRow: View {
     let type: String
     @State var contactData: CNContact
     @State var value: String
