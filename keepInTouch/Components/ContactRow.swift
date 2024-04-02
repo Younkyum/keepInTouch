@@ -11,11 +11,13 @@ import Contacts
 struct ContactRow: View {
     @State public var contactData: CNContact
     @State private var showDetailModal = false
-    @Binding var selectedConact: CNContact?
+    @Binding var targetName: String?
+    @Binding var targetNumber: String?
     
     var body: some View {
         Button(action: {
-            selectedConact = contactData
+            targetName = "\(contactData.familyName) \(contactData.givenName)"
+            targetNumber = contactData.phoneNumbers.first?.value.stringValue
         }, label: {
             HStack{
                 Image(uiImage: (UIImage(data: contactData.thumbnailImageData ?? Data()) ?? UIImage(named: "thumbnail")!))

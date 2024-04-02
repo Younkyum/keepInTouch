@@ -17,8 +17,9 @@
 		C61679052B9C2B2500245FC5 /* Extention-Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61679042B9C2B2500245FC5 /* Extention-Color.swift */; };
 		C61679092B9C315300245FC5 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C61679082B9C315300245FC5 /* Colors.xcassets */; };
 		C63CA9642BA9B06A003809F3 /* ContactRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63CA9632BA9B06A003809F3 /* ContactRow.swift */; };
-		C63CA9662BA9B11F003809F3 /* Extention-Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63CA9652BA9B11F003809F3 /* Extention-Content.swift */; };
+		C63CA9662BA9B11F003809F3 /* Extention-Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63CA9652BA9B11F003809F3 /* Extention-Contact.swift */; };
 		C65DF6812BB407E6001E02D3 /* SelectContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65DF6802BB407E6001E02D3 /* SelectContactView.swift */; };
+		C67D9ABD2BBBD3610082F1D8 /* ReigsterContactRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67D9ABC2BBBD3610082F1D8 /* ReigsterContactRow.swift */; };
 		C685E2D12BB040F20055ADBE /* Extension-KeyboardHide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685E2D02BB040F20055ADBE /* Extension-KeyboardHide.swift */; };
 		C685E2D32BB044550055ADBE /* ContactDataRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685E2D22BB044550055ADBE /* ContactDataRow.swift */; };
 		C685E2D72BB045B30055ADBE /* KeepInTouchSettingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685E2D62BB045B30055ADBE /* KeepInTouchSettingRow.swift */; };
@@ -26,7 +27,6 @@
 		C685E2DD2BB046A80055ADBE /* TitleBarRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685E2DC2BB046A80055ADBE /* TitleBarRow.swift */; };
 		C685E2DF2BB046EA0055ADBE /* ContactSectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685E2DE2BB046EA0055ADBE /* ContactSectionRow.swift */; };
 		C685E2E52BB0546F0055ADBE /* Extension-NavigationSwipeBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685E2E42BB0546F0055ADBE /* Extension-NavigationSwipeBack.swift */; };
-		C685E2E72BB056530055ADBE /* Neulis-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C685E2E62BB056520055ADBE /* Neulis-Medium.otf */; };
 		C6C1489A2BB28DCA0096BEE1 /* CurrentNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C148992BB28DCA0096BEE1 /* CurrentNotification.swift */; };
 		C6C1489C2BB291A60096BEE1 /* NotiContactsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C1489B2BB291A60096BEE1 /* NotiContactsRow.swift */; };
 		C6C1489E2BB294500096BEE1 /* Extension-Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C1489D2BB294500096BEE1 /* Extension-Calendar.swift */; };
@@ -44,8 +44,9 @@
 		C61679042B9C2B2500245FC5 /* Extention-Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention-Color.swift"; sourceTree = "<group>"; };
 		C61679082B9C315300245FC5 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		C63CA9632BA9B06A003809F3 /* ContactRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRow.swift; sourceTree = "<group>"; };
-		C63CA9652BA9B11F003809F3 /* Extention-Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention-Content.swift"; sourceTree = "<group>"; };
+		C63CA9652BA9B11F003809F3 /* Extention-Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention-Contact.swift"; sourceTree = "<group>"; };
 		C65DF6802BB407E6001E02D3 /* SelectContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectContactView.swift; sourceTree = "<group>"; };
+		C67D9ABC2BBBD3610082F1D8 /* ReigsterContactRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReigsterContactRow.swift; sourceTree = "<group>"; };
 		C685E2D02BB040F20055ADBE /* Extension-KeyboardHide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-KeyboardHide.swift"; sourceTree = "<group>"; };
 		C685E2D22BB044550055ADBE /* ContactDataRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataRow.swift; sourceTree = "<group>"; };
 		C685E2D62BB045B30055ADBE /* KeepInTouchSettingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepInTouchSettingRow.swift; sourceTree = "<group>"; };
@@ -53,7 +54,6 @@
 		C685E2DC2BB046A80055ADBE /* TitleBarRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarRow.swift; sourceTree = "<group>"; };
 		C685E2DE2BB046EA0055ADBE /* ContactSectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSectionRow.swift; sourceTree = "<group>"; };
 		C685E2E42BB0546F0055ADBE /* Extension-NavigationSwipeBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-NavigationSwipeBack.swift"; sourceTree = "<group>"; };
-		C685E2E62BB056520055ADBE /* Neulis-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Neulis-Medium.otf"; path = "../../../../Downloads/Neulis/Neulis-Medium.otf"; sourceTree = "<group>"; };
 		C6C148992BB28DCA0096BEE1 /* CurrentNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentNotification.swift; sourceTree = "<group>"; };
 		C6C1489B2BB291A60096BEE1 /* NotiContactsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiContactsRow.swift; sourceTree = "<group>"; };
 		C6C1489D2BB294500096BEE1 /* Extension-Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-Calendar.swift"; sourceTree = "<group>"; };
@@ -96,7 +96,6 @@
 				C61678E82B9ADDC900245FC5 /* keepInTouchApp.swift */,
 				C61678EC2B9ADDCC00245FC5 /* Assets.xcassets */,
 				C61679082B9C315300245FC5 /* Colors.xcassets */,
-				C685E2E62BB056520055ADBE /* Neulis-Medium.otf */,
 				C61678EE2B9ADDCC00245FC5 /* Preview Content */,
 			);
 			path = keepInTouch;
@@ -124,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				C61679042B9C2B2500245FC5 /* Extention-Color.swift */,
-				C63CA9652BA9B11F003809F3 /* Extention-Content.swift */,
+				C63CA9652BA9B11F003809F3 /* Extention-Contact.swift */,
 				C685E2D02BB040F20055ADBE /* Extension-KeyboardHide.swift */,
 				C685E2E42BB0546F0055ADBE /* Extension-NavigationSwipeBack.swift */,
 				C6C1489D2BB294500096BEE1 /* Extension-Calendar.swift */,
@@ -137,6 +136,7 @@
 			children = (
 				C610C6612BB2F9E000866482 /* BottomTrailingButton.swift */,
 				C63CA9632BA9B06A003809F3 /* ContactRow.swift */,
+				C67D9ABC2BBBD3610082F1D8 /* ReigsterContactRow.swift */,
 				C685E2DC2BB046A80055ADBE /* TitleBarRow.swift */,
 				C685E2DE2BB046EA0055ADBE /* ContactSectionRow.swift */,
 				C6C1489B2BB291A60096BEE1 /* NotiContactsRow.swift */,
@@ -224,7 +224,6 @@
 			files = (
 				C61679092B9C315300245FC5 /* Colors.xcassets in Resources */,
 				C61678F02B9ADDCC00245FC5 /* Preview Assets.xcassets in Resources */,
-				C685E2E72BB056530055ADBE /* Neulis-Medium.otf in Resources */,
 				C61678ED2B9ADDCC00245FC5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,7 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C63CA9662BA9B11F003809F3 /* Extention-Content.swift in Sources */,
+				C63CA9662BA9B11F003809F3 /* Extention-Contact.swift in Sources */,
 				C6C1489E2BB294500096BEE1 /* Extension-Calendar.swift in Sources */,
 				C6C1489C2BB291A60096BEE1 /* NotiContactsRow.swift in Sources */,
 				C685E2DF2BB046EA0055ADBE /* ContactSectionRow.swift in Sources */,
@@ -248,6 +247,7 @@
 				C63CA9642BA9B06A003809F3 /* ContactRow.swift in Sources */,
 				C685E2E52BB0546F0055ADBE /* Extension-NavigationSwipeBack.swift in Sources */,
 				C61679052B9C2B2500245FC5 /* Extention-Color.swift in Sources */,
+				C67D9ABD2BBBD3610082F1D8 /* ReigsterContactRow.swift in Sources */,
 				C610C6622BB2F9E000866482 /* BottomTrailingButton.swift in Sources */,
 				C685E2D32BB044550055ADBE /* ContactDataRow.swift in Sources */,
 				C685E2D72BB045B30055ADBE /* KeepInTouchSettingRow.swift in Sources */,

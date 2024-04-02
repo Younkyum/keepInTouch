@@ -11,14 +11,15 @@ import Contacts
 
 struct SelectContactView: View {
     @State var contactList: [CNContact] = []
-    @Binding var targetContact: CNContact?
+    @Binding var targetName: String?
+    @Binding var targetNumber: String?
     @State var searchText: String = ""
     
     var body: some View {
         VStack {
             List {
                 ForEach(searchResults, id: \.id) { contact in
-                    ContactRow(contactData: contact, selectedConact: $targetContact)
+                    ContactRow(contactData: contact, targetName: $targetName, targetNumber: $targetNumber)
                 }
             }
             .listStyle(.plain)

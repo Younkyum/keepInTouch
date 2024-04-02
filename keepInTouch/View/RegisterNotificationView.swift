@@ -12,8 +12,9 @@ struct RegisterNotificationView: View {
     @State var title: String = ""
     @State var memo: String = ""
     var cycleOptions = ["1주", "2주", "1개월", "2개월", "6개월"]
-    @State var selectedCycle = ""
-    @State var targetContact: CNContact?
+    @State var selectedCycle = "1주"
+    @State var targetName: String?
+    @State var targetNumber: String?
     
     
     @Binding var showRegisterNotificationView: Bool
@@ -45,8 +46,15 @@ struct RegisterNotificationView: View {
                     }
                     
                     Section {
-                        NavigationLink(destination: SelectContactView(targetContact: $targetContact)) {
+                        NavigationLink(destination: SelectContactView(targetName: $targetName, targetNumber: $targetNumber)) {
                             Text("연락처 선택")
+                        }
+                        if (targetNumber != nil) {
+                            HStack {
+                                Text(targetName ?? "오류")
+                                Spacer()
+                                Text(targetNumber ?? "선택된 전화번호가 없음")
+                            }
                         }
                     }
                     
@@ -68,7 +76,7 @@ struct RegisterNotificationView: View {
                         Button("완료") {
                             saveNotification()
                         }
-                        .disabled(!isChanged || targetContact == nil)
+                        .disabled(!isChanged || targetNumber == nil)
                         
                     }
                 })
